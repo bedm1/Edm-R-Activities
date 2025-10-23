@@ -111,8 +111,11 @@ fev_data <- read_csv(here("data/fev.csv"))
 To read in a file that is saved in the same directory as the .Rproj file:
 
 ```{r}
-library(here)
-fev_data <- read_csv(here("fev.csv"))
+#data is in /Users/Bal_1/Documents/R Activities/Inputs`
+#use library readr function
+library(readr)
+fev_data <- read_csv("fev.csv")
+
 ```
 
 (Remember to install the "here" package the first time.)
@@ -150,6 +153,9 @@ There is a text file in your dataset so you can practice: psa.txt
 
 ```{r}
 # Add your code here!
+library(readr)
+psa<- read_table("psa.txt")
+
 ```
 
 --> Have a look at the "Useful arguments" section of the data import cheat sheet. 
@@ -157,12 +163,18 @@ Use a few of them when you read in fev.csv and look at the data, is that what yo
 
 ```{r}
 # Add your code here!
+#data is in /Users/Bal_1/Documents/R Activities/Inputs`
+#use library readr function
+library(readr)
+fev_data <- read_csv("fev.csv",col_names = TRUE,show_col_types = FALSE)
+
 ```
 
 --> Apply the summary function to a tibble. What does it do?
 
 ```{r}
 # Add your code here!
+summary(fev_data)
 ```
 
 
